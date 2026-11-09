@@ -5,7 +5,7 @@
 SCRIPT: 06_analyze_spatial_autocorrelation.py
 STUDY:  Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing
         Industrial Engine-Power Limits with Capacity Reduction
-JOURNAL: Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258)
+JOURNAL: Turkish Journal of Maritime and Marine Sciences
 AUTHOR: Sezgin Tunca, Ph.D. (ORCID: 0000-0001-6840-1466)
 PURPOSE: Geocode all 34 registration ports of the 6,584 Turkish Black Sea commercial
          fishing vessels (27 strict Black Sea & Bosphorus coastal ports [n=6,420] +
