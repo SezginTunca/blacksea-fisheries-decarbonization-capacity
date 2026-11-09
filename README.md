@@ -122,7 +122,7 @@ blacksea-fisheries-decarbonization-capacity/
 | **Scenario C: Selective Gear Transition ($15\%$ Trawl)** | 6,584 | 615,281.07 | 338.01 | -28.97 | **-7.89%** | 30.36% ($0\%$ rebound) |
 | **Scenario D: Propulsion & Auxiliary Retrofit ($-15\%$)** | 6,584 | 675,722.62 | 311.93 | -55.05 | **-15.00%** | 32.12% ($0\%$ rebound) |
 | **Scenario E: Integrated Roadmap ($\text{A} \cup \text{B}$, 42 overlap)** | 5,926 | 531,995.78 | 259.43 | **-107.55** | **-29.31%** | 32.77% ($\text{E}_0$) / **35.06%** ($\text{E}$) |
-| **Sensitivity $\text{E}_{750}$: Tiered $\ge 24\text{ m}$ PS Cap ($750\text{ kW}$) + B** | 5,926 | 557,300.62 | 283.73 | -83.25 | **-22.69%** | — |
+| **Sensitivity $\text{E}_{750}$: Tiered $\ge 24\text{ m}$ PS Limit ($750\text{ kW}$) + B** | 5,926 | 557,300.62 | 283.73 | -83.25 | **-22.69%** | — |
 
 ---
 
