@@ -15,7 +15,7 @@ PURPOSE: Non-parametric Data Envelopment Analysis (DEA) and Directional Distance
            3. Standard CRS, VRS, Andersen-Petersen Super-Efficiency, and Single-Output (s=1)
               dimensionality diagnostics across 21 homogeneous cohorts
            4. Catch-Allocation Sensitivity Analysis across 4 allocation rules (kW-proportional,
-              GT-proportional, Vessel-count proportional, and LOA^1.5 allometric scaling)
+              GT-proportional, Vessel-count proportional, and LOA^1.5 geometric hull-length scaling)
            5. Expanded-Sample Inclusion Sensitivity (adding micro <6 m cohorts and
               Marmara-interface vessels, n = 6,563 across 25 cohorts).
 INPUTS:
@@ -430,7 +430,7 @@ for mode, label in [
     ('kw', 'Rule 1 (Baseline): Engine-Power (kW) Proportional'),
     ('gt', 'Rule 2: Gross-Tonnage (GT) Proportional'),
     ('vessel', 'Rule 3: Equal Vessel-Count (1/n) Allocation'),
-    ('allometric_loa', 'Rule 4: Allometric Hull-Length (LOA^1.5) Scaling')
+    ('allometric_loa', 'Rule 4: Geometric Hull-Length (LOA^1.5) Scaling')
 ]:
     res_m = run_cohort_dea(tr_ew_base, weight_mode=mode)
     rho_vrs, _ = spearmanr(df_gear_dmu['TE_VRS'], res_m['TE_VRS'])
