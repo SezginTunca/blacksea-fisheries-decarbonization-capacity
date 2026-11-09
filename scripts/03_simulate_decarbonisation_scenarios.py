@@ -85,7 +85,7 @@ tr_fleet['gear_detailed'] = tr_fleet.apply(classify_gear, axis=1)
 # ==============================================================================
 # 2. GEAR-DIFFERENTIATED OPERATIONAL DUTY-CYCLE INVENTORY vs UPPER-BOUND ENVELOPE
 # ==============================================================================
-# Stoichiometric marine gasoil carbon factor: 3.17 kg CO2 per kg fuel (IMO MEPC)
+# Standard marine fuel carbon emission factor (IMO MEPC / ISO 8178: 3.17 kg CO2/kg fuel)
 CO2_PER_KG_FUEL = 3.17
 DIESEL_DENSITY_KG_L = 0.845
 CO2_PER_LITER_KG = CO2_PER_KG_FUEL * DIESEL_DENSITY_KG_L  # 2.67865 kg CO2 / L
@@ -216,7 +216,7 @@ overlap_excess_kw = float((tr_fleet.loc[overlap_mask, 'engine_power_kw'] - p75_k
 
 print(f"\nExact Policy Subset Counts:")
 print(f"  Active mobile-gear pool (PS + OTB + PTM + TBB): N = {len(tr_active)}, P75 = {p75_kw:.2f} kW")
-print(f"  Scenario A (>441.0 kW capped): n = {n_capped} vessels ({tr_fleet.loc[cap_mask, 'gear1'].value_counts().to_dict()})")
+print(f"  Scenario A (>441.0 kW limited): n = {n_capped} vessels ({tr_fleet.loc[cap_mask, 'gear1'].value_counts().to_dict()})")
 print(f"  Scenario B (>35 yr retired)  : n = {v35_count} vessels ({v35_count/n_vessels*100:.2f}%)")
 print(f"  Overlap (>35 yr AND >441 kW) : n = {n_overlap} vessels ({tr_fleet.loc[overlap_mask, 'gear1'].value_counts().to_dict()}), excess above 441 kW = {overlap_excess_kw:,.2f} kW")
 
@@ -225,7 +225,7 @@ scen_a_kw = np.where(cap_mask, p75_kw, tr_fleet['engine_power_kw'])
 co2_a_real = (scen_a_kw * tr_fleet['ef_realistic']).sum() / 1000.0
 co2_a_upper = (scen_a_kw * UNIFORM_UPPER_EF).sum() / 1000.0
 
-# Scenario A_Tiered750 sensitivity: 750 kW transitional cap for >=24 m PS, 441 kW for all other active gears
+# Scenario A_Tiered750 sensitivity: 750 kW transitional limit for >=24 m PS, 441 kW for all other active gears
 cap_limit_tiered = np.where(
     (tr_fleet['gear_detailed'] == 'Purse Seiner (PS)') & (tr_fleet['loa_m'] >= 24.0),
     750.0,
@@ -308,7 +308,7 @@ scenarios_list = [
                   f'Fleet-wide 15% fuel-efficiency retrofit (10%-20% bounds: {base_co2_real_kt-co2_d10_real:.2f}-{base_co2_real_kt-co2_d20_real:.2f} kt/yr)'),
     make_scen_row('Scenario E: Integrated Roadmap (A + B)', len(scen_b_df), scen_e_kw.sum(), co2_e_real, co2_e_upper,
                   f'Joint 441 kW limit + >35 yr buyback (accounting for {n_overlap} overlap vessels / {overlap_excess_kw:,.2f} kW shared excess)'),
-    make_scen_row('Sensitivity E_750: Tiered PS Cap (750 kW >=24m) + B', len(scen_b_df), scen_e750_kw.sum(), co2_e750_real, co2_e750_upper,
+    make_scen_row('Sensitivity E_750: Tiered PS Limit (750 kW >=24m) + B', len(scen_b_df), scen_e750_kw.sum(), co2_e750_real, co2_e750_upper,
                   'Transitional 750 kW main-engine limit for >=24 m purse seiners, 441 kW for trawlers, plus >35 yr buyback')
 ]
 
