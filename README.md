@@ -1,7 +1,5 @@
 # Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing Industrial Engine-Power Limits with Capacity Reduction
 
-[![DOI: TrJMMS](https://img.shields.io/badge/Journal_DOI-10.52998%2Ftrjmms.2042258-0284c7)](https://doi.org/10.52998/trjmms.2042258)
-[![DOI: Zenodo](https://img.shields.io/badge/Zenodo_Archive-10.5281%2Fzenodo.24077970-10b981)](https://doi.org/10.5281/zenodo.24077970)
 [![License: MIT](https://img.shields.io/badge/License-MIT-amber.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-1e3a8a.svg)](requirements.txt)
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0001--6840--1466-a6ce39)](https://orcid.org/0000-0001-6840-1466)
@@ -9,8 +7,7 @@
 > **Official Replication Codebase** for the research article published in the ***Turkish Journal of Maritime and Marine Sciences* (TrJMMS)**:  
 > **English Title:** *Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing Industrial Engine-Power Limits with Capacity Reduction*  
 > **Turkish Title (*Türkçe Başlık*):** *Türkiye Karadeniz Ticari Balıkçılığının Karbonsuzlaştırılması Endüstriyel Motor Gücü Sınırları ile Kapasite Azaltımının Birlikte Uygulanmasını Gerektirmektedir*  
-> **Author:** Sezgin Tunca, Ph.D. (Independent Researcher, Foça, İzmir, Türkiye; ORCID: [`0000-0001-6840-1466`](https://orcid.org/0000-0001-6840-1466))  
-> **Article DOI:** [`10.52998/trjmms.2042258`](https://doi.org/10.52998/trjmms.2042258) | **Zenodo Code Archive DOI:** [`10.5281/zenodo.24077970`](https://doi.org/10.5281/zenodo.24077970)
+> **Author:** Sezgin Tunca, Ph.D. (Independent Researcher, Foça, İzmir, Türkiye; ORCID: [`0000-0001-6840-1466`](https://orcid.org/0000-0001-6840-1466))
 
 ---
 
@@ -69,7 +66,7 @@ blacksea-fisheries-decarbonization-capacity/
 ├── README.md                                        # Project overview, methodology, and replication guide
 ├── LICENSE                                          # MIT Open-Source License
 ├── requirements.txt                                 # Pinned Python scientific dependencies
-├── .zenodo.json                                     # Zenodo metadata descriptor (DOI: 10.5281/zenodo.24077970)
+├── .zenodo.json                                     # Zenodo metadata descriptor
 ├── .gitignore                                       # Excludes all local datasets (.csv, .xlsx) and caches
 ├── data/
 │   └── README.md                                    # Official institutional data sources & schema guide
@@ -105,11 +102,11 @@ blacksea-fisheries-decarbonization-capacity/
 
 | Gear Segment | Vessels ($n$) | Fleet Share ($\%$) | Certified Power ($\text{kW}$) | Mean $\text{EII}$ ($\text{kW GT}^{-1}$) | Realistic Duty-Cycle $\text{CO}_2$ ($\text{kt yr}^{-1}$) | Share of Realistic $\text{CO}_2$ ($\%$) | Uniform Upper-Bound $\text{CO}_2$ ($\text{kt yr}^{-1}$) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Pelagic/Demersal Trawler (`OTB/PTM`)** | 549 | 8.34% | 213,279.74 | 10.67 | **172.93** | 47.12% | 247.75 |
+| **Pelagic/Demersal Trawler (`OTB/PTM`)** | 549 | 8.34% | 213,279.74 | 11.30 | **172.93** | 47.12% | 247.75 |
 | **Purse Seiner (`PS`)** | 208 | 3.16% | 147,471.26 | 4.81 | **141.74** | 38.62% | 171.30 |
-| **Small-Scale / Polyvalent (`MIS`)** | 5,259 | 79.88% | 275,246.69 | 15.61 | **36.28** | 9.89% | 319.73 |
-| **Beam Trawler (`TBB`)** | 548 | 8.32% | 33,254.15 | 11.79 | **11.73** | 3.20% | 38.63 |
-| **Hydraulic Dredger (`DRB`)** | 20 | 0.30% | 6,470.78 | 12.14 | **4.30** | 1.17% | 7.52 |
+| **Small-Scale / Polyvalent (`MIS`)** | 5,259 | 79.88% | 275,246.69 | 15.16 | **36.28** | 9.89% | 319.73 |
+| **Beam Trawler (`TBB`)** | 548 | 8.32% | 33,254.15 | 15.43 | **11.73** | 3.20% | 38.63 |
+| **Hydraulic Dredger (`DRB`)** | 20 | 0.30% | 6,470.78 | 13.12 | **4.30** | 1.17% | 7.52 |
 | **Total Turkish GSA 29 Fleet** | **6,584** | **100.00%** | **675,722.62** | **14.53** | **366.98** | **100.00%** | **784.92** |
 
 ### 2. Conditional Decarbonization Policy Scenarios (Scenarios A–E & $\text{E}_{750}$)
@@ -119,10 +116,10 @@ blacksea-fisheries-decarbonization-capacity/
 | **Baseline Status Quo (2024)** | 6,584 | 675,722.62 | 366.98 | — | 0.00% | 29.52% |
 | **Scenario A: Active-Gear Power Limit ($441\text{ kW}$)** | 6,584 | 595,567.20 | 292.41 | -74.56 | **-20.32%** | 32.76% ($0\%$ rebound) |
 | **Scenario B: Aging-Vessel Retirement ($>35\text{ yr}$)** | 5,926 | 600,455.97 | 322.91 | -44.06 | **-12.01%** | 29.70% ($\text{B}_0$) / 32.13% ($\text{B}$) |
-| **Scenario C: Selective Gear Transition ($15\%$ Trawl)** | 6,584 | 615,281.07 | 338.01 | -28.97 | **-7.89%** | 30.36% ($0\%$ rebound) |
+| **Scenario C: Selective Gear Transition ($15\%$ Trawl)** | 6,584 | 640,510.68 | 338.01 | -28.97 | **-7.89%** | 30.39% ($0\%$ rebound) |
 | **Scenario D: Propulsion & Auxiliary Retrofit ($-15\%$)** | 6,584 | 675,722.62 | 311.93 | -55.05 | **-15.00%** | 32.12% ($0\%$ rebound) |
 | **Scenario E: Integrated Roadmap ($\text{A} \cup \text{B}$, 42 overlap)** | 5,926 | 531,995.78 | 259.43 | **-107.55** | **-29.31%** | 32.77% ($\text{E}_0$) / **35.06%** ($\text{E}$) |
-| **Sensitivity $\text{E}_{750}$: Tiered $\ge 24\text{ m}$ PS Limit ($750\text{ kW}$) + B** | 5,926 | 557,300.62 | 283.73 | -83.25 | **-22.69%** | — |
+| **Sensitivity $\text{E}_{750}$: Tiered $\ge 24\text{ m}$ PS Limit ($750\text{ kW}$) + B** | 5,926 | 557,274.30 | 283.73 | -83.25 | **-22.69%** | 34.18% ($+5\%$ rebound) |
 
 ---
 
@@ -154,18 +151,15 @@ If you use this codebase, analytical models, or visual framework in your researc
   author  = {Tunca, Sezgin},
   title   = {Decarbonizing {Turkish} {Black Sea} Commercial Fisheries Requires Pairing Industrial Engine-Power Limits with Capacity Reduction},
   journal = {Turkish Journal of Maritime and Marine Sciences},
-  year    = {2026},
-  doi     = {10.52998/trjmms.2042258},
-  url     = {https://doi.org/10.52998/trjmms.2042258}
+  year    = {2026}
 }
 
 @software{Tunca2026BlackSeaCode,
   author    = {Tunca, Sezgin},
   title     = {Replication Codebase: Decarbonizing {Turkish} {Black Sea} Commercial Fisheries Requires Pairing Industrial Engine-Power Limits with Capacity Reduction},
   year      = {2026},
-  publisher = {Zenodo},
+  publisher = {GitHub},
   version   = {1.0.0},
-  doi       = {10.5281/zenodo.24077970},
-  url       = {https://doi.org/10.5281/zenodo.24077970}
+  url       = {https://github.com/SezginTunca/blacksea-fisheries-decarbonization-capacity}
 }
 ```
