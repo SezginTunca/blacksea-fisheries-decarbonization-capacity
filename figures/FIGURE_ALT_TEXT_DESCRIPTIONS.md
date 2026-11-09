@@ -1,7 +1,7 @@
 # Figure Accessibility & Alt-Text Descriptions (`figures/`)
 
 **Manuscript:** *Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing Industrial Engine-Power Limits with Capacity Reduction*  
-**Journal:** *Turkish Journal of Maritime and Marine Sciences* (TrJMMS), DOI: `10.52998/trjmms.2042258`  
+**Journal:** *Turkish Journal of Maritime and Marine Sciences* (TrJMMS)  
 **Author:** Sezgin Tunca, Ph.D. (ORCID: `0000-0001-6840-1466`)
 
 All figures are rendered at **600 DPI** in both raster (`.png`) and vector (`.pdf`) formats by `scripts/08_generate_publication_figures.py` and `scripts/07_extract_blacksea_ais_validation.py`.
