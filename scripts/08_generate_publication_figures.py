@@ -990,7 +990,7 @@ fig7, axes7 = plt.subplots(2, 2, figsize=(14.6, 10.4), dpi=600)
 ax_7a = axes7[0, 0]
 scen_labels = [
     "Baseline\n(Duty Cycle)",
-    "Scen. A\n441 kW Cap",
+    "Scen. A\n441 kW Limit",
     "Scen. B\n>35 yr Exit",
     "Scen. C\nGear Shift",
     "Scen. D\n-15% Tech",
@@ -1057,7 +1057,7 @@ sns.kdeplot(df_mc["Scenario_B_ZeroRebound_Margin"], ax=ax_7c, color="#10B981", l
 sns.kdeplot(df_mc["Scenario_B_Margin"], ax=ax_7c, color="#047857", linestyle="-", linewidth=1.9,
             label=f"Scen. B: >35 yr Exit, +5% CPUE Relief ({df_mc['Scenario_B_Margin'].mean():.2f}%)")
 sns.kdeplot(df_mc["Scenario_A_Margin"], ax=ax_7c, color="#0284C7", linestyle="-", linewidth=1.8,
-            label=f"Scen. A: 441 kW Cap ({df_mc['Scenario_A_Margin'].mean():.2f}%)")
+            label=f"Scen. A: 441 kW Limit ({df_mc['Scenario_A_Margin'].mean():.2f}%)")
 sns.kdeplot(df_mc["Scenario_E_ZeroRebound_Margin"], ax=ax_7c, color="#F97316", linestyle="--", linewidth=1.8,
             label=f"Scen. E0: Integrated, 0% Rebound ({df_mc['Scenario_E_ZeroRebound_Margin'].mean():.2f}%)")
 sns.kdeplot(df_mc["Scenario_E_Combined_Margin"], ax=ax_7c, color="#DC2626", linestyle="-", linewidth=2.2,
@@ -1480,11 +1480,11 @@ def generate_figure_1_workflow():
         [
             "• Gear-differentiated operational baseline: 367.0 thousand tons",
             "• Uniform industrial capacity upper bound: 784.9 thousand tons",
-            "  – Scenario A: 441-kilowatt cap across 315 industrial vessels",
+            "  – Scenario A: 441-kilowatt limit across 315 industrial vessels",
             "  – Scenario B: Retirement of 658 vessels over 35 years old",
             "  – Scenario C: Shift of 165 trawl vessels to passive gear",
             "  – Scenario D: 15-percent technical propulsion efficiency gain",
-            "  – Scenario E: Integrated cap and retirement with 42-vessel overlap",
+            "  – Scenario E: Integrated limit and retirement with 42-vessel overlap",
             "• Surviving-fleet Monte Carlo simulation with 10,000 draws:",
             "  – Contrasts zero catch rebound against five-percent relief",
             "• Fuel shock stress tests across 8 to 20 percent depreciation",
