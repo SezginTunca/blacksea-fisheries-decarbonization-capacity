@@ -5,7 +5,7 @@
 SCRIPT: 00_run_all_pipeline.py
 STUDY:  Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing
         Industrial Engine-Power Limits with Capacity Reduction
-JOURNAL: Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258)
+JOURNAL: Turkish Journal of Maritime and Marine Sciences
 AUTHOR: Sezgin Tunca, Ph.D. (ORCID: 0000-0001-6840-1466)
 PURPOSE: Master analytical pipeline orchestrator. Executes Steps 01 through 08
          sequentially to reproduce all empirical tables, naval architectural
