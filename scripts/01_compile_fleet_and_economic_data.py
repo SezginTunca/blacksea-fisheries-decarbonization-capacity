@@ -5,7 +5,7 @@
 SCRIPT: 01_compile_fleet_and_economic_data.py
 STUDY:  Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing
         Industrial Engine-Power Limits with Capacity Reduction
-JOURNAL: Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258)
+JOURNAL: Turkish Journal of Maritime and Marine Sciences
 AUTHOR: Sezgin Tunca, Ph.D. (ORCID: 0000-0001-6840-1466)
 PURPOSE: Compile GSA 29 commercial fleet segment architecture, Black Sea riparian
          regional capacity benchmarks, and longitudinal operational cost accounts
