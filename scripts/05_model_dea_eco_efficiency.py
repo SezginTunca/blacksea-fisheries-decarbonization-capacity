@@ -5,7 +5,7 @@
 SCRIPT: 05_model_dea_eco_efficiency.py
 STUDY:  Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing
         Industrial Engine-Power Limits with Capacity Reduction
-JOURNAL: Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258)
+JOURNAL: Turkish Journal of Maritime and Marine Sciences
 AUTHOR: Sezgin Tunca, Ph.D. (ORCID: 0000-0001-6840-1466)
 PURPOSE: Non-parametric Data Envelopment Analysis (DEA) and Directional Distance
          Function (DDF) eco-efficiency linear programming models for the Turkish
@@ -306,7 +306,7 @@ def run_cohort_dea(vessel_df, weight_mode='kw', sc_list=None):
     """
     weight_mode in {'kw', 'gt', 'vessel', 'allometric_loa'}
     Allocates observed basin-gear guild catch across vessels strictly according to weight_mode
-    (100% transparent alignment with Eq. 10c — zero hidden ad-hoc multipliers).
+    (100% transparent alignment with Eq. 7 — zero hidden ad-hoc multipliers).
     """
     if sc_list is None:
         sc_list = ['small (6-12m)', 'medium (12-18m)', 'large (18-24m)', 'very_large (>=24m)']
