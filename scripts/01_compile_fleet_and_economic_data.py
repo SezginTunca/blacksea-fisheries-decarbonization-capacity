@@ -29,7 +29,7 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 TABLES_DIR = os.path.join(BASE_DIR, "tables")
 os.makedirs(TABLES_DIR, exist_ok=True)
 
-# Stoichiometric marine gasoil carbon factor (ISO 8178 / IMO MEPC: 3.17 kg CO2/kg fuel)
+# Standard marine fuel carbon emission factor (IMO MEPC / ISO 8178: 3.17 kg CO2/kg fuel)
 CO2_PER_KG_FUEL = 3.17
 UNIFORM_UPPER_EF = 1.1616  # Uniform industrial upper-bound factor (t CO2 / kW / yr)
 
@@ -44,7 +44,7 @@ GEAR_EF_REALISTIC = {
 
 
 def classify_turkish_gear(row):
-    """Map GFCM primary gear code and gear group into the 5 canonical GSA 29 segments."""
+    """Map GFCM primary gear code and gear group into the 5 standard GSA 29 fleet segments."""
     g1 = str(row.get("gear1", "")).strip().upper()
     gg = str(row.get("gear_group", "")).strip().lower()
     if g1 == "PS" or "purse" in gg:
