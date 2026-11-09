@@ -1,0 +1,48 @@
+{
+  "title": "Replication Codebase: Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing Industrial Engine-Power Limits with Capacity Reduction",
+  "upload_type": "software",
+  "description": "Reproducible Python analytical pipeline, naval-architectural resistance models, non-parametric directional distance frontier solvers, spatial autocorrelation diagnostics, panel econometric specifications, and 600-DPI publication figure scripts for the study: Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing Industrial Engine-Power Limits with Capacity Reduction, published in the Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258). In accordance with institutional data-governance protocols, raw and processed datasets are not redistributed in this archive; full institutional data-source documentation and retrieval instructions (GFCM, FAO FishStatJ, TÜİK, BSGM, TCMB, CMEMS, NOAA OISST, and Global Fishing Watch) are provided in data/README.md.",
+  "creators": [
+    {
+      "name": "Tunca, Sezgin",
+      "affiliation": "Independent Researcher, Foça, İzmir, Türkiye",
+      "orcid": "0000-0001-6840-1466"
+    }
+  ],
+  "access_right": "open",
+  "license": "mit",
+  "version": "1.0.0",
+  "language": "eng",
+  "keywords": [
+    "Black Sea fisheries",
+    "GFCM GSA 29",
+    "fleet decarbonization",
+    "engine intensity index",
+    "Holtrop-Mennen resistance",
+    "Data Envelopment Analysis",
+    "spatial autocorrelation",
+    "fisheries economics",
+    "Türkiye"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.52998/trjmms.2042258",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/SezginTunca/blacksea-fisheries-decarbonization-capacity",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.24077970",
+      "relation": "isIdenticalTo",
+      "resource_type": "software",
+      "scheme": "doi"
+    }
+  ],
+  "journal_title": "Turkish Journal of Maritime and Marine Sciences"
+}
