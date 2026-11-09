@@ -5,7 +5,7 @@
 SCRIPT: 02_compile_fao_catch_benchmarks.py
 STUDY:  Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing
         Industrial Engine-Power Limits with Capacity Reduction
-JOURNAL: Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258)
+JOURNAL: Turkish Journal of Maritime and Marine Sciences
 AUTHOR: Sezgin Tunca, Ph.D. (ORCID: 0000-0001-6840-1466)
 PURPOSE: Extract and analyze historical marine capture fisheries landings
          (1950-2024) across FAO Major Fishing Area 37 (Mediterranean and Black
