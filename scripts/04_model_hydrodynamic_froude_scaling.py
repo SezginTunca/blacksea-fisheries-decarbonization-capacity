@@ -5,7 +5,7 @@
 SCRIPT: 04_model_hydrodynamic_froude_scaling.py
 STUDY:  Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing
         Industrial Engine-Power Limits with Capacity Reduction
-JOURNAL: Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258)
+JOURNAL: Turkish Journal of Maritime and Marine Sciences
 AUTHOR: Sezgin Tunca, Ph.D. (ORCID: 0000-0001-6840-1466)
 PURPOSE: Analyze empirical scaling of Engine Intensity Index (EII = kW/GT) versus
          Length Overall (LOA) and compute theoretical semi-empirical hydrodynamic
