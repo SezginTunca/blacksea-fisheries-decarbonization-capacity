@@ -7,7 +7,7 @@
 > **Official Replication Codebase** for the research article published in the ***Turkish Journal of Maritime and Marine Sciences* (TrJMMS)**:  
 > **English Title:** *Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing Industrial Engine-Power Limits with Capacity Reduction*  
 > **Turkish Title (*Türkçe Başlık*):** *Türkiye Karadeniz Ticari Balıkçılığının Karbonsuzlaştırılması Endüstriyel Motor Gücü Sınırları ile Kapasite Azaltımının Birlikte Uygulanmasını Gerektirmektedir*  
-> **Author:** Sezgin Tunca, Ph.D. (Independent Researcher, Foça, İzmir, Türkiye; ORCID: [`0000-0001-6840-1466`](https://orcid.org/0000-0001-6840-1466))
+> **Author:** Sezgin Tunca, Ph.D. (ORCID: [`0000-0001-6840-1466`](https://orcid.org/0000-0001-6840-1466))
 
 ---
 
