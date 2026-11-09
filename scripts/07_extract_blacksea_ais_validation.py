@@ -5,7 +5,7 @@
 SCRIPT: 07_extract_blacksea_ais_validation.py
 STUDY:  Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing
         Industrial Engine-Power Limits with Capacity Reduction
-JOURNAL: Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258)
+JOURNAL: Turkish Journal of Maritime and Marine Sciences
 AUTHOR: Sezgin Tunca, Ph.D. (ORCID: 0000-0001-6840-1466)
 PURPOSE: Extract illustrative satellite AIS operational speed check metrics for
          commercial fishing vessels operating in the Black Sea (2018-2024) from
