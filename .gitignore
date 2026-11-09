@@ -1,0 +1,25 @@
+# Exclude all raw and processed datasets (never distribute datasets on GitHub or Zenodo)
+data/*.csv
+data/*.xlsx
+data/*.xls
+data/*.geojson
+data/*.shp
+data/*.parquet
+tables/*.csv
+*.csv
+*.xlsx
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# OS & editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
