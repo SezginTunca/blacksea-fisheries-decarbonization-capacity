@@ -5,7 +5,7 @@
 SCRIPT: 03_simulate_decarbonisation_scenarios.py
 STUDY:  Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing
         Industrial Engine-Power Limits with Capacity Reduction
-JOURNAL: Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258)
+JOURNAL: Turkish Journal of Maritime and Marine Sciences
 AUTHOR: Sezgin Tunca, Ph.D. (ORCID: 0000-0001-6840-1466)
 PURPOSE:
   1. Compute Primary Gear-Differentiated Operational Duty-Cycle CO2 Inventory vs.
@@ -103,7 +103,7 @@ GEAR_EMISSION_PARAMS = {
     },
     'Pelagic/Demersal Trawler (OTB/PTM)': {
         'hours_yr': 1400.0, 'load_factor': 0.60, 'kappa_aux': 1.45, 'sfoc_g_kwh': 210.0,
-        'empirical_basis': 'Open trawl season (~145 d * 9.7 h); continuous towing LF=0.60; GFCM P_aux/P_main=0.76 (n=28) at 0.35 winch/hold LF'
+        'empirical_basis': 'Open trawl season (~145 d * 9.7 h); continuous towing LF=0.60; GFCM P_aux/P_main=0.791 (n=28) at 0.35 winch/hold LF'
     },
     'Beam Trawler (TBB)': {
         'hours_yr': 900.0, 'load_factor': 0.50, 'kappa_aux': 1.15, 'sfoc_g_kwh': 215.0,
@@ -406,8 +406,8 @@ surviving_vessel_share_b = len(scen_b_df) / n_vessels  # 0.90006
 
 # Note on Scenario B0 (0% CPUE competition rebound):
 # Surviving vessels (90.01% of count) account for (1 - pct_real_b) of fuel; pre-1990 engines (>35 yr)
-# exhibit ~6% higher specific fuel consumption than post-1990 engines, giving a tiny compositional
-# fuel-per-vessel saving (~0.18 pp) when crowding rebound = 0%, vs +5% assumed crowding relief in Scenario B!
+# exhibit +8% higher specific fuel consumption than post-1990 engines, giving a compositional
+# fuel-per-vessel saving (0.9% fuel saving = +0.19 pp net margin) when crowding rebound = 0%, vs +5% assumed crowding relief in Scenario B!
 age_sfoc_comp_saving = 0.009  # 0.9% lower fuel burn per surviving vessel from retiring oldest engines
 
 rev_drop_a_sim = np.random.normal(0.020, 0.005, n_sim)
@@ -462,6 +462,13 @@ for i in range(n_sim):
     net_e5 = rev_e5 - fuel_e5 - (rev_e5 * base_labor_ratio) - base_other - base_depr
     m_e5 = (net_e5 / rev_e5) * 100.0
 
+    # Sensitivity E750: Tiered 750 kW >=24 m PS limit + 441 kW trawl limit + >35 yr retirement (+5% rebound)
+    surviving_cap750_fuel_red = 0.1501
+    rev_e750 = base_rev * rebound_b5_sim[i] * (1.0 - 0.79 * rev_drop_a_sim[i])
+    fuel_e750 = base_fuel * (1.0 - surviving_cap750_fuel_red)
+    net_e750 = rev_e750 - fuel_e750 - (rev_e750 * base_labor_ratio) - base_other - base_depr
+    m_e750 = (net_e750 / rev_e750) * 100.0
+
     mc_rows.append({
         'Scenario_A_Margin': m_a,
         'Scenario_B_ZeroRebound_Margin': m_b0,
@@ -470,13 +477,15 @@ for i in range(n_sim):
         'Scenario_D_Margin': m_d,
         'Scenario_E_ZeroRebound_Margin': m_e0,
         'Scenario_E_Combined_Margin': m_e5,
+        'Sensitivity_E750_Margin': m_e750,
         'Scenario_A_Margin_Change': m_a - base_net_margin,
         'Scenario_B_ZeroRebound_Margin_Change': m_b0 - base_net_margin,
         'Scenario_B_Margin_Change': m_b5 - base_net_margin,
         'Scenario_C_Margin_Change': m_c - base_net_margin,
         'Scenario_D_Margin_Change': m_d - base_net_margin,
         'Scenario_E_ZeroRebound_Margin_Change': m_e0 - base_net_margin,
-        'Scenario_E_Combined_Margin_Change': m_e5 - base_net_margin
+        'Scenario_E_Combined_Margin_Change': m_e5 - base_net_margin,
+        'Sensitivity_E750_Margin_Change': m_e750 - base_net_margin
     })
 
 df_mc = pd.DataFrame(mc_rows)
@@ -499,7 +508,8 @@ label_map = [
     ('Scenario_C_Margin', 'Scenario C: 15% Trawl Passive Conversion', '-1.5% +/- 0.5% harvest adjustment; lower passive fuel intensity'),
     ('Scenario_D_Margin', 'Scenario D: -15% Technical Retrofit', '15.0% +/- 1.5% fuel saving; +0.50 pp annualized retrofit capex'),
     ('Scenario_E_ZeroRebound_Margin', 'Scenario E0: Integrated A + B (0% Rebound)', 'Joint 441 kW limit + >35 yr retirement WITHOUT crowding rebound'),
-    ('Scenario_E_Combined_Margin', 'Scenario E: Integrated A + B (+5% Assumed Rebound)', 'Joint 441 kW limit + >35 yr retirement WITH assumed +5% crowding relief')
+    ('Scenario_E_Combined_Margin', 'Scenario E: Integrated A + B (+5% Assumed Rebound)', 'Joint 441 kW limit + >35 yr retirement WITH assumed +5% crowding relief'),
+    ('Sensitivity_E750_Margin', 'Sensitivity E750: Tiered 750 kW PS Limit + B (+5% Rebound)', 'Tiered 750 kW >=24 m PS limit + 441 kW trawl limit + >35 yr retirement')
 ]
 
 for col, nice_name, reb_note in label_map:
