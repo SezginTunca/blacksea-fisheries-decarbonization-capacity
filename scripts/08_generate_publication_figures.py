@@ -5,7 +5,7 @@
 SCRIPT: 08_generate_publication_figures.py
 STUDY:  Decarbonizing Turkish Black Sea Commercial Fisheries Requires Pairing
         Industrial Engine-Power Limits with Capacity Reduction
-JOURNAL: Turkish Journal of Maritime and Marine Sciences (DOI: 10.52998/trjmms.2042258)
+JOURNAL: Turkish Journal of Maritime and Marine Sciences
 AUTHOR: Sezgin Tunca, Ph.D. (ORCID: 0000-0001-6840-1466)
 PURPOSE: Render all main-text publication figures (Figures 1-7) and Supplementary
          Figure S1 in 600 DPI PNG and vector PDF formats:
